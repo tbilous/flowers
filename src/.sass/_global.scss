@@ -2,17 +2,6 @@
 /* Webfont: Lato-Bold */
 //noinspection ALL
 
-@font-face {
-    font-family: 'Ionicons';
-    src: url("../fonts/ionicons.eot?v=2.0.0");
-    src: url("../fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"),
-    url("../fonts/ionicons.ttf?v=2.0.0") format("truetype"),
-    url("../fonts/ionicons.woff?v=2.0.0") format("woff"),
-    url("../fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 /* font-family: "RalewaySemiBold"; */
 @font-face {
@@ -181,67 +170,6 @@ a, button, input, textarea {
     }
 }
 
-.i-icons {
-    position: relative;
-    &::before {
-        font-family: 'Ionicons';
-        position: absolute;
-        height: 40px;
-        width: 20px;
-        top: 3px;
-        font-size: 22px;
-        display: block;
- /*       padding-top: 7px;
-        left: 7px;*/
-        color: $brand-primary;
-        left: -24px;
-        padding-top: 4px;
-    }
-    &.airplane::before {
-        content: '\f2c3';
-
-    }
-    &.person::before {
-        content: '\f213';
-
-    }
-    &.telephone::before {
-        content: '\f4b9';
-
-    }
-    &.text::before {
-        content: '\f11d';
-
-    }
-    &.mail::before {
-        content: '\f2eb';
-
-    }
-}
-.i-social{
-    display: inline-block;
-    width: 3em;
-    height: 3em;
-    background-repeat: no-repeat;
-    background-size: cover;
-    &.fb{
-        background-image: url("../img/icons/s-fb-icon.png");
-    }
-    &.tw{
-        background-image: url("../img/icons/s-tw-icon.png");
-    }
-    &.g{
-        background-image: url("../img/icons/s-g-icon.png");
-    }
-}
-
-.line-icon {
-    display: block;
-    height: 10px;
-    background: url("../img/icons/icon-line.png") center no-repeat;
-    margin-bottom: 1em;
-}
-
 .animated {
     opacity: 0;
     &.visible {
@@ -250,6 +178,7 @@ a, button, input, textarea {
 }
 
 //FA ICONS
+/*
 .fa {
     display: inline-block;
     font: normal normal normal 14px/1 'FontAwesome';
@@ -333,3 +262,4 @@ a, button, input, textarea {
 .fa-file-text-o:before {
     content: "\f0f6";
 }
+*/

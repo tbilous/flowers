@@ -128,7 +128,7 @@ $(document).ready(function () {
     });
 
     // Lost count digit flow
-    function runDigitFlow() {
+/*    function runDigitFlow() {
         $('.lost-count').each(function (i, el) {
             var targetValue = $(el).attr('data-value');
             var curValue = 1;
@@ -141,7 +141,7 @@ $(document).ready(function () {
                     clearInterval(intervalHandle);
             }, 50);
         });
-    }
+    }*/
      //runDigitFlow()
     //Scroll MONITOR
     $('.s-monitor').each(function (i, element) {
@@ -168,7 +168,7 @@ $(document).ready(function () {
                 $(element).css('animation-delay', delay + 's')
             }
             if ($(element).get(0).hasAttribute('data-value')) {
-                runDigitFlow();  // RUN DIGIT FLOW .lost-count
+              /*  runDigitFlow();  // RUN DIGIT FLOW .lost-count*/
             }
             $(element).addClass(action);
             watcher.destroy
