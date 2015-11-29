@@ -1,0 +1,95 @@
+.header {
+    padding-top: $navbar-height;
+
+    @media (min-width: 768px) {
+        .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+            margin-left: 20px;
+        }
+    }
+    .i-icons:before {
+        left: 0;
+        top: .6em;
+        padding: 0;
+        font-size: 1em;
+    }
+    .navbar-main {
+        li {
+            @media (min-width: 768px) {
+                &:after {
+                    content: '/';
+                    position: absolute;
+                    top: 30%;
+                    color: white;
+                    right: 0;
+                }
+            }
+            &:nth-last-child(1):after {
+                display: none;
+            }
+        }
+    }
+    .navbar-right {
+        li {
+            a {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+    }
+    .start-modal {
+        img {
+            margin-left: 8px;
+        }
+    }
+    .logo-img {
+        margin-top: 1em;
+        @media (max-width: 768px) {
+            margin: 0 auto;
+        }
+    }
+    .contact-group {
+        font-size: 1.4em;
+        margin-top: 1.4em;
+        text-align: center;
+        @media (min-width: 768px) {
+            float: right;
+        }
+        li {
+            margin-bottom: 5px;
+            span {
+                position: relative;
+                display: inline-block;
+                &:before {
+                    content: '';
+                    width: 1.4em;
+                    height: 1.4em;
+                    position: absolute;
+                    left: -2em;
+                    background-size: contain;
+                }
+            }
+
+            &:nth-child(1) {
+                span {
+                    &::before {
+                        background: url("../img/icons/i-mts.png") no-repeat;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                span {
+                    &:before {
+                        background: url("../img/icons/i-life.png") no-repeat;
+                    }
+                }
+            }
+            &:nth-child(3) {
+                span {
+                    &:before {
+                        background: url("../img/icons/i-kyivstar.png") no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -9,8 +9,6 @@
     font-style: normal;
 }
 
-
-
 .i-icons {
     position: relative;
     &::before {
@@ -21,7 +19,7 @@
         top: 3px;
         font-size: 22px;
         display: block;
-        color: $brand-primary;
+        //color: $brand-primary;
         left: -24px;
         padding-top: 4px;
     }
@@ -44,5 +42,8 @@
     &.mail::before {
         content: '\f2eb';
 
+    }
+    &.ion-android-home:before {
+        content: "\f38f";
     }
 }
