@@ -37,8 +37,37 @@
         }
     }
     .start-modal {
-        img {
+        position: relative;
+        color: white;
+        .btn-img-label {
             margin-left: 8px;
+        }
+        .btn-img-label, .btn-text-label {
+            position: relative;
+        }
+
+        background-image: url("../img/top-btn-bg.jpg");
+        .shadow {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            // Needs latest Compass, add '@import "compass"' to your scss
+            // Permalink - use to edit and share this gradient:
+            // http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0.65+0,0+100;Neutral+Density
+            @include background-image(linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%));
+        }
+        &:hover,
+        &:focus,
+        &:active {
+            .shadow {
+                // Needs latest Compass, add '@import "compass"' to your scss
+                // Permalink - use to edit and share this gradient:
+                // http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+35,0.65+100
+                @include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 35%, rgba(0, 0, 0, 0.4) 100%));
+            }
         }
     }
     .logo-img {
@@ -61,32 +90,51 @@
                 display: inline-block;
                 &:before {
                     content: '';
-                    width: 1.4em;
-                    height: 1.4em;
+                    width: 1.2em;
+                    height: 1.2em;
                     position: absolute;
                     left: -2em;
                     background-size: contain;
+                    background-repeat: no-repeat;
                 }
             }
 
             &:nth-child(1) {
-                span {
+                display: inline-block;
+                position: relative;
+                span:nth-last-of-type(1) {
                     &::before {
-                        background: url("../img/icons/i-mts.png") no-repeat;
+                        background-image: url("../img/icons/i-mts.png");
+                    }
+                }
+                .icon-c {
+                    position: absolute;
+                    content: '';
+                    width: 1.2em;
+                    height: 1.2em;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    &.viber {
+                        background-image: url("../img/icons/icon-viber.png");
+                        left: -5em;
+                    }
+                    &.whatsapp {
+                        background-image: url("../img/icons/icon-whatsapp.png");
+                        left: -3.5em;
                     }
                 }
             }
             &:nth-child(2) {
                 span {
                     &:before {
-                        background: url("../img/icons/i-life.png") no-repeat;
+                        background-image: url("../img/icons/i-life.png");
                     }
                 }
             }
             &:nth-child(3) {
                 span {
                     &:before {
-                        background: url("../img/icons/i-kyivstar.png") no-repeat;
+                        background-image: url("../img/icons/i-kyivstar.png");
                     }
                 }
             }
