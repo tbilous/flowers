@@ -1,0 +1,50 @@
+.why-section{
+    .section-body{
+        padding-top: 2.5em;
+    }
+}
+.why-block{
+    font-family: 'LatoWebMedium', sans-serif;
+    font-size: 1.2em;
+    padding-left: 5em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 5em;
+    margin-bottom: 1.3em;
+    &::before{
+        content: '';
+        width: 4em;
+        height: 4em;
+        position: absolute;
+        left: 0;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    &.icon1::before{
+        background-image: url("../img/icons/icon-why-1.png");
+    }
+    &.icon2::before{
+        background-image: url("../img/icons/icon-why-2.png");
+    }
+    &.icon3::before{
+        background-image: url("../img/icons/icon-why-3.png");
+    }
+    &.icon4::before{
+        background-image: url("../img/icons/icon-why-4.png");
+    }
+    &.icon5::before{
+        background-image: url("../img/icons/icon-why-5.png");
+    }
+    &.icon6::before{
+        background-image: url("../img/icons/icon-why-6.png");
+    }
+    @media all and (max-width: $screen-phone) {
+        padding-left: 2.5em;
+        &::before{
+            width: 2em;
+            height: 2em;
+        }
+    }
+}

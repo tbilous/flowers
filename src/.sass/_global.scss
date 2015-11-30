@@ -55,6 +55,7 @@
 
 body {
     position: relative;
+
     @media all and (max-width: $screen-tablet) {
         font-size: 12px;
     }
@@ -99,6 +100,9 @@ body {
 
 .color-primary {
     color: $brand-primary;
+}
+.color-brand-red{
+    color: $brand-danger;
 }
 
 .light {
@@ -201,90 +205,17 @@ a, button, input, textarea {
         opacity: 1;
     }
 }
-
-//FA ICONS
-/*
-.fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 'FontAwesome';
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+section{
+    padding: 3em 0;
 }
 
-.fa-icon {
-    //display: inline-block;
-    //font: normal normal normal 14px/1 'FontAwesome';
-    font-size: inherit; // can't have font-size inherit on line above, so need to override
-    text-rendering: auto; // optimizelegibility throws things off #1094
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-
+.section-header{
+    .heading{
+        -webkit-text-fill-color: transparent;
+        background: linear-gradient(transparent, transparent),
+        url('../img/text-bg.jpg') repeat right;
+        -webkit-background-clip: text;
+        margin-top: .5em;
+    }
+    font-family: 'RalewaySemiBold', sans-serif;
 }
-
-.use-icon:before {
-    left: 0;
-    position: absolute;
-    color: $brand-primary;
-    font: normal normal normal 1.2em/1 'FontAwesome';
-}
-
-.fa-chevron-down:before {
-    content: "\f107";
-}
-.fa-chevron-up:before {
-    content: "\f077";
-}
-.fa-angle-up:before {
-    content: "\f106";
-}
-
-.fa-street-view:before {
-    content: "\f21d";
-}
-
-.fa-user-md:before {
-    content: "\f0f0";
-}
-
-.fa-car:before {
-    content: "\f1b9";
-}
-
-.fa-motorcycle:before {
-    content: "\f21c";
-}
-
-.fa-bicycle:before {
-    content: "\f206";
-}
-
-.fa-anchor:before {
-    content: "\f13d";
-}
-
-.fa-paw:before {
-    content: "\f1b0";
-}
-
-.fa-building-o:before {
-    content: "\f0f7";
-}
-
-.fa-subway:before {
-    content: "\f239";
-}
-
-.fa-safari:before {
-    content: "\f267";
-}
-
-.fa-binoculars:before {
-    content: "\f1e5";
-}
-
-.fa-file-text-o:before {
-    content: "\f0f6";
-}
-*/

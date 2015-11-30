@@ -1,0 +1,10 @@
+.gallery-section{
+    position: relative;
+    .section-border{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 9px;
+        background: url("../img/border-line.png") repeat-x;
+    }
+}

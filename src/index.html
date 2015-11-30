@@ -69,7 +69,8 @@
                 </div>
                 <div class="col-sm-6 text-center">
                     <h3 class="text-uppercase">Нужен букет? Звони!</h3>
-                    <button class="btn btn-lg start-modal">
+                    <button class="btn btn-lg start-modal" data-toggle="modal"
+                            data-target="#feedbackModal">
                         <span class="shadow"></span>
                         <span class="btn-text-label">ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</span>
                         <img class="btn-img-label" src="img/icons/arrow-icon.png" alt="arrow">
@@ -88,7 +89,139 @@
             </div>
         </div>
     </div>
+    <div class="main-header text-center">
+        <div class="line top"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="delivery-icons">
+                        <ul class="list-inline">
+                            <li>
+                                <img src="img/icons/full-time.png" alt="full time">
+                                <span>
+                                    Работаем круглосуточно!
+                                </span>
+                            </li>
+                            <li>
+                                <img src="img/icons/car.png" alt="full time">
+                                <span>
+                                    Бесплатная доставка!
+                                </span>
+                            </li>
+                            <li>
+                                <img src="img/icons/gift.png" alt="full time">
+                                <span>
+                                    Подарок к букету!
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="heading>">
+                        <h2 class="text-uppercase color-brand-red">
+                            Доставка цветов в Киеве и области
+                        </h2>
+
+                        <h1 class="bold text-uppercase">
+                            <span class="text-nowrap">Розы от 99 грн <br></span>
+                            <span class="text-nowrap">за штуку!</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="time-delivery">
+                <div class="form-wrapper text-center bold">
+                    <span class="top-clock-heading">БЛИЖАЙШЕЕ ВРЕМЯ ДОСТАВКИ</span>
+                    <ul class="top-clock text-left list-inline">
+                        <li><img src="img/icons/time.png" alt="time delivery"></li>
+                        <li class="top-clock-wrapper"></li>
+                    </ul>
+
+                </div>
+            </div>
+            <form class="body-form form-discount form" id="discountForm">
+                <div class="form-wrapper">
+                    <div class="form-header bold">
+                        <h3 class="heading">
+                            Акция!
+                        </h3>
+                        <span class="sub-heading">Закажи сейчас и получи бесплатную доставку!</span>
+                    </div>
+                    <input type="hidden" name="head" value="бесплатная доставка">
+
+                    <div class="input-group i-icons person">
+                        <input class="" type="text" name="name" placeholder="введите имя" required>
+                    </div>
+                    <div class="input-group i-icons telephone">
+                        <input class="phone-input" type="text" name="phone" placeholder="введите телефон"
+                               required>
+                    </div>
+                    <div class="input-group i-icons airplane">
+                        <input class="submit btn btn-danger" type="submit" id="submitDiscountForm"
+                               value="Оставить заявку">
+                    </div>
+                    <label for="submitDiscountForm">
+                        <small>*Мы не распространяем ваши личные данные</small>
+                    </label>
+
+                    <div class="submit-wrapper">
+                        <span class="clock-header">До конца акции:</span>
+
+                        <div class="clock" id="clock" style="min-height: 100px">
+
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="line bottom"></div>
+    </div>
 </header>
+<section class="why-section">
+    <div class="section-header">
+        <h2 class="heading">
+            Почему мы?
+        </h2>
+    </div>
+    <div class="section-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="why-block icon1">
+                        <span>96% клиентов рекомендуют нас друзьям и обращаются к нам постоянно</span>
+                    </div>
+                    <div class="why-block icon2">
+                        <span>Быстрая доставка без опозданий, самые улыбчивые курьеры в Киеве</span>
+                    </div>
+                    <div class="why-block icon3">
+                        <span>У нас самые свежие цветы в Киеве, они будут радовать получателя минимум 7 дней!</span>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="why-block icon4">
+                        <span>Наши флористы – профессионалы, убедитесь в этом сами!</span>
+                    </div>
+                    <div class="why-block icon5">
+                        <span>Подарки к каждой покупке – кризал (средство для сохранения свежести цветов), открытка, доставка!</span>
+                    </div>
+                    <div class="why-block icon6">
+                        <span>Каждый букет создаем индивидуально! Присылайте нам любой понравившийся букет, и мы сделаем так же, и даже лучше.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="gallery-section">
+    <div class="section-border"></div>
+    <div class="section-header">
+        <h2 class="heading">
+            Галлерея наших работ
+        </h2>
+    </div>
+</section>
 
 <!-- Add your site or application content here -->
 <p>Hello world! This is HTML5 Boilerplate.</p>
