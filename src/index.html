@@ -215,12 +215,137 @@
     </div>
 </section>
 <section class="gallery-section">
-    <div class="section-border"></div>
+    <div class="section-border top"></div>
     <div class="section-header">
         <h2 class="heading">
-            Галлерея наших работ
+            Галерея наших работ
         </h2>
     </div>
+    <div class="section-body">
+        <div class="container-fluid">
+            <div class="gallery-wrapper carousel slide carousel-fade" data-ride="carousel" data-type="multi"
+                 data-interval="0"
+                 id="galleryCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-xs-3">
+                            <div class="gallery-block great">
+                                <a href="img/gallery/gallery1.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3">
+                            <div class="gallery-block">
+                                <a href="img/gallery/gallery2.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                            <div class="gallery-block">
+                                <a href="img/gallery/gallery3.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3">
+                            <div class="gallery-block">
+                                <a href="img/gallery/gallery4.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                            <div class="gallery-block">
+                                <a href="img/gallery/gallery5.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3">
+                            <div class="gallery-block">
+                                <a href="img/gallery/gallery6.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                            <div class="gallery-block">
+                                <a href="img/gallery/gallery7.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3">
+                            <div class="gallery-block">
+                                <a href="#" class="gallery-photo">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                            <div class="gallery-block">
+                                <a href="#" class="gallery-photo">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-xs-3">
+                            <div class="gallery-block">
+                                <a href="#" class="gallery-photo">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                            <div class="gallery-block">
+                                <a href="#" class="gallery-photo">
+                                    <span class="i-block ion-android-search"></span>
+                                </a>
+
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#galleryCarousel" data-slide="prev">
+                    <span class="ion ion-ios-arrow-left"></span>
+                </a>
+                <a class="right carousel-control" href="#galleryCarousel" data-slide="next">
+                    <span class="ion ion-ios-arrow-right"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="section-border bottom"></div>
 </section>
 
 <!-- Add your site or application content here -->
@@ -276,12 +401,14 @@
 <script src="assets/js/dropdown.js"></script>
 <script src="assets/js/modal.js"></script>
 <script src="assets/js/transition.js"></script>
+<script src="assets/js/carousel.js"></script>
 <!--{{CUT-END}}-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
 
 <script src="js/{{MAIN_JS_FILE}}"></script>
+<script src="js/vendor/lightbox-plus-jquery.min.js"></script>
 <script src="js/plugins.js"></script>
 <script>
     /*
@@ -297,12 +424,30 @@
 
 </script>
 <script>
-    /*    lightbox.option({
-     showImageNumberLabel: false,
-     alwaysShowNavOnTouchDevices: true,
-     wrapAround: true,
-     maxHeight: 750
-     })*/
+    $('.carousel[data-type="multi"] .item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i = 0; i < 2; i++) {
+            next = next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+</script>
+<script>
+    lightbox.option({
+        showImageNumberLabel: false,
+        alwaysShowNavOnTouchDevices: true,
+        wrapAround: true,
+        maxHeight: 750
+    })
 </script>
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

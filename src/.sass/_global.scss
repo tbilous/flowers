@@ -219,3 +219,53 @@ section{
     }
     font-family: 'RalewaySemiBold', sans-serif;
 }
+
+
+.carousel-fade {
+    .carousel-inner {
+        .item {
+            transition-property: opacity;
+        }
+
+        .item,
+        .active.left,
+        .active.right {
+            opacity: 0;
+        }
+
+        .active,
+        .next.left,
+        .prev.right {
+            opacity: 1;
+        }
+
+        .next,
+        .prev,
+        .active.left,
+        .active.right {
+            left: 0;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+    .carousel-control {
+        z-index: 2;
+    }
+}
+
+//Ion icons
+.ion{
+    &:before {
+        font-family: 'Ionicons';
+        color: black;
+        font-size: 3em;
+        @media (max-width: $screen-tablet) {
+            font-size: 1em;
+        }
+    }
+}
+.ion-ios-arrow-left:before {
+    content: "\f3d2";
+}
+.ion-ios-arrow-right:before {
+    content: "\f3d3";
+}

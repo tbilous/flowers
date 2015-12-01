@@ -23,7 +23,21 @@
 }());
 
 $(document).ready(function () {
-    // Scroll MONITOR
+
+    // gallery background
+    function thumbsBg() {
+        $('.gallery-photo').each(function () {
+            var url = $(this).attr('href');
+            var parent = $(this).closest('.gallery-block');
+            var img = new Image();
+            img.src = url;
+            img.style.display = 'none';
+            //document.body.appendChild(img);
+            parent.css('backgroundImage', 'url(' + url + ')');
+        });
+    }
+    window.onload = thumbsBg;
+
 
 
 // SCROLL TO ANCHOR
