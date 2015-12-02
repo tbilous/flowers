@@ -18,9 +18,8 @@
         height: 4em;
         position: absolute;
         left: 0;
-        background-repeat: no-repeat;
         background-size: contain;
-        background-position: center;
+        background: no-repeat center;
     }
     &.icon1::before{
         background-image: url("../img/icons/icon-why-1.png");

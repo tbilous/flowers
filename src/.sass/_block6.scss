@@ -1,0 +1,51 @@
+.action{
+    padding: 4em 0;
+    .time-delivery{
+        max-width: 300px;
+        display: inline-block;
+        padding-top: 3em;
+    }
+}
+.body-clock{
+    position: relative;
+    padding-left: 3.5em;
+    &::before{
+        content: '';
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        background: url("../img/icons/time.png") no-repeat ;
+        left: 0;
+        background-size: cover;
+    }
+}
+.action-header{
+    text-transform: uppercase;
+    font-size: 4em;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(transparent, transparent),
+    url('../img/text-bg.jpg') repeat right center;
+    color: $gray-light;
+    -webkit-background-clip: text;
+}
+.action-header, h3{
+    font-family: 'RalewaySemiBold', sans-serif;
+}
+.list-about{
+    margin-top: 4em;
+    li{
+        font-size: 1.2em;
+        padding: 5px 0;
+
+        span{
+            font-family: 'LatoWeb', sans-serif;
+            vertical-align: middle;
+            padding-left: 1em;
+        }
+    }
+}
+//BLOCK7
+.video{
+    position: relative;
+    padding: 4em 0;
+}

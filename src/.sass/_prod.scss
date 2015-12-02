@@ -9,6 +9,8 @@
 
 .prod-card {
     margin-bottom: 4em;
+    padding-bottom: 1em;
+    background-color: white;
 
     .card-photo {
         background-size: cover;
@@ -36,6 +38,19 @@
         }
         &.card-8 {
             background-image: url("../img/prod/prod8.jpg");
+        }
+        //offers
+        &.offer-1 {
+            background-image: url("../img/prod/offer51.jpg");
+        }
+        &.offer-2 {
+            background-image: url("../img/prod/offer101.jpg");
+        }
+        &.offer-3 {
+            background-image: url("../img/prod/offerbox.jpg");
+        }
+        &.offer-4 {
+            background-image: url("../img/prod/offer-big-bear.jpg");
         }
 
     }
@@ -132,14 +147,19 @@
     color: black;
     font-size: 2em;
     max-width: 530px;
-    margin: 0 auto;
+    margin: 0 auto 1em;
+    font-family: 'RalewaySemiBold', sans-serif;
+    line-height: 1.8;
     @media (max-width: $screen-phone) {
         font-size: 1.2em;
     }
 }
 .special-offer{
+    position: relative;
+    background: url("../img/block-offer-bg.png");
     .offer-header{
         padding: 1em 0;
+        margin-top: 0;
         text-align: center;
         color: white;
         background-size: contain;

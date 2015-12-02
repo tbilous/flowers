@@ -1,0 +1,64 @@
+.extra-section {
+    position: relative;
+    background: url("../img/extra-bg.jpg");
+    color: white;
+    .section-body{
+        padding-top: 3em;
+    }
+    .start-modal{
+        color: black;
+        margin-top: 2em;
+        background-color: white;
+    }
+    .section-border{
+        bottom: 8px;
+    }
+}
+
+.extra-block {
+    font-family: 'LatoWebMedium', sans-serif;
+    font-size: 1.2em;
+    padding-left: 4em;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 3em;
+    margin-bottom: 1em;
+    &::before {
+        content: '';
+        width: 3em;
+        height: 3em;
+        position: absolute;
+        left: 0;
+        background-size: contain;
+        background: no-repeat center;
+    }
+    &.icon1::before {
+        background-image: url("../img/icons/icon-extra-1.png");
+    }
+    &.icon2::before {
+        background-image: url("../img/icons/icon-extra-2.png");
+    }
+    &.icon3::before {
+        background-image: url("../img/icons/icon-extra-3.png");
+    }
+    &.icon4::before {
+        background-image: url("../img/icons/icon-extra-4.png");
+    }
+    &.icon5::before {
+        background-image: url("../img/icons/icon-extra-5.png");
+    }
+    &.icon6::before {
+        background-image: url("../img/icons/icon-extra-6.png");
+    }
+    &.icon7::before {
+        background-image: url("../img/icons/icon-extra-7.png");
+    }
+    @media all and (max-width: $screen-phone) {
+        padding-left: 2.5em;
+        &::before {
+            width: 2em;
+            height: 2em;
+        }
+    }
+}

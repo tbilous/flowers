@@ -1,18 +1,6 @@
 .gallery-section {
     padding-top: 2em;
     position: relative;
-    .section-border {
-        position: absolute;
-        width: 100%;
-        height: 9px;
-        background: url("../img/border-line.png") repeat-x;
-        &.top {
-            top: 0;
-        }
-        &.bottom {
-            bottom: 0;
-        }
-    }
     .section-body{
         padding: 3em 0 1em;
     }
