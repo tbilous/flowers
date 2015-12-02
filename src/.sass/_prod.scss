@@ -1,0 +1,148 @@
+.production-section {
+    .spacer {
+        padding-top: 100%;
+    }
+    .section-body {
+        padding-top: 3em;
+    }
+}
+
+.prod-card {
+    margin-bottom: 4em;
+
+    .card-photo {
+        background-size: cover;
+        background-position: center;
+        &.card-1 {
+            background-image: url("../img/prod/prod1.jpg");
+        }
+        &.card-2 {
+            background-image: url("../img/prod/prod2.jpg");
+        }
+        &.card-3 {
+            background-image: url("../img/prod/prod3.jpg");
+        }
+        &.card-4 {
+            background-image: url("../img/prod/prod4.jpg");
+        }
+        &.card-5 {
+            background-image: url("../img/prod/prod5.jpg");
+        }
+        &.card-6 {
+            background-image: url("../img/prod/prod6.jpg");
+        }
+        &.card-7 {
+            background-image: url("../img/prod/prod7.jpg");
+        }
+        &.card-8 {
+            background-image: url("../img/prod/prod8.jpg");
+        }
+
+    }
+    .p-heading {
+        padding: 1em 0;
+    }
+    .p-name {
+        font-size: 110%;
+    }
+    .p-line {
+        display: inline-block;
+        height: 2px;
+        width: 2em;
+        background-color: $brand-danger;
+    }
+
+    .p-button-group {
+        margin: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        li {
+            width: 40%;
+            font-size: 1em;
+            height: 2.5em;
+            padding: 0;
+            line-height: 2.5em;
+            text-align: center;
+            border-radius: $border-radius-small;
+            &:nth-child(1) {
+                box-shadow: 0 0 2px 0 gray;
+            }
+        }
+
+    }
+}
+
+.callback-block {
+    background-size: cover;
+    background-position: center;
+    padding: 3em 0;
+    @media (max-width: $screen-tablet) {
+        background-image: url("../img/callback-bg-lowres.jpg");
+    }
+    @media (min-width: $screen-tablet) {
+        background-image: url("../img/callback-bg-hires.jpg");
+    }
+}
+
+.callback-form {
+    max-width: 300px;
+    margin: 0 auto;
+    input {
+        width: 100%;
+        height: 2.5em;
+        padding: 0;
+        line-height: 2.5em;
+        font-size: 1.2em;
+        &[type='text'] {
+            padding-left: 2em;
+            &::-webkit-input-placeholder {
+                color: $gray-light;
+            }
+            border: 1px solid $gray-light;
+            border-radius: $border-radius-base;
+            &:focus,
+            &:active {
+                border-color: $brand-success;
+                color: $brand-success;
+            }
+            &[name='name'] {
+                background: url("../img/icons/name_gray.png") no-repeat 5px center;
+                &:focus,
+                &:active {
+                    background: url("../img/icons/name_green.png") no-repeat 5px center;
+                }
+            }
+            &[name='phone'] {
+                background: url("../img/icons/phone_gray.png") no-repeat 5px center;
+                &:focus,
+                &:active {
+                    background: url("../img/icons/phone_green.png") no-repeat 5px center;
+                }
+            }
+        }
+    }
+    .input-group {
+        width: 100%;
+        margin: .5em 0;
+    }
+}
+
+.callback-header {
+    color: black;
+    font-size: 2em;
+    max-width: 530px;
+    margin: 0 auto;
+    @media (max-width: $screen-phone) {
+        font-size: 1.2em;
+    }
+}
+.special-offer{
+    .offer-header{
+        padding: 1em 0;
+        text-align: center;
+        color: white;
+        background-size: contain;
+        background: url("../img/offer-head-bg.png") no-repeat center;
+    }
+}
