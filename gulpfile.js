@@ -94,7 +94,7 @@ gulp.task('copy:index.html', function () {
     return gulp.src(dirs.src + '/index.html')
         .pipe(plugins.replace(/{{JQUERY_VERSION}}/g, pkg.devDependencies.jquery))
         .pipe(plugins.replace(/{{MAIN_JS_FILE}}/g, 'main.js'))
-        .pipe(plugins.replace(/{{MAIN_CSS_FILE}}/g, mainStylesheet + '.min.css'))
+        // .pipe(plugins.replace(/{{MAIN_CSS_FILE}}/g, mainStylesheet + '.min.css'))
         .pipe(plugins.replace(/{{CUT-START}}(.|\n)+?{{CUT-END}}/gm, ''))
         .pipe(gulp.dest(dirs.dist));
 });

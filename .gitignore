@@ -2,6 +2,8 @@
 /gps.iml
 archive
 node_modules
+/src/css/styles.css
+/src/css/styles.css.map
 /bower_components
 /.idea
 /test

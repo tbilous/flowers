@@ -1,0 +1,83 @@
+$feedback-green: #43cb83;
+$feedback-sign-name: #028b42;
+.feedback-section {
+    .section-body{
+        padding: 3em 0;
+    }
+    .carousel-control {
+        display: flex;
+        align-items: center;
+        width: 10%;
+        &.right, &.left {
+            background: none;
+        }
+        &.right {
+            justify-content: flex-end;
+        }
+        &.left {
+            justify-content: flex-start;
+        }
+    }
+    .ion-ios-arrow-left:before, .ion-ios-arrow-right:before {
+        font-size: 2em;
+        color: $feedback-green;
+    }
+    .feedback-block {
+        font-family: 'LatoWeb', sans-serif;
+        color: white;
+        //temp
+        padding: 0 2em 0 1em;
+        @media (max-width: 990px) {
+            font-size: 10px;
+        }
+    }
+    .feedback-text {
+        max-height: 12em;
+        padding: 1em;
+        position: relative;
+        background: $feedback-green;
+        border-radius: 5px;
+        font-size: 1.2em;
+        &::after {
+            content: '';
+            position: absolute; /* Абсолютное позиционирование */
+            left: 1em;
+            bottom: -20px; /* Положение треугольника */
+            border: 10px solid transparent;
+            border-top: 10px solid $feedback-green;
+
+        }
+    }
+    .feedback-sign{
+        margin-top: 1.5em;
+        li{
+            vertical-align: middle;
+            img{
+                width: 4em;
+                height: 4em;
+            }
+            span:nth-of-type(1){
+                font-size: 1.5em;
+                color: $feedback-sign-name;
+                font-weight: bold;
+            }
+            span:nth-of-type(2){
+                color: $gray-light;
+            }
+            &:nth-last-child(1){
+                padding-left: 1em;
+            }
+        }
+    }
+    @media (max-width: $screen-sm-min) {
+        .carousel-inner .active.left {
+            left: -33%;
+        }
+        .carousel-inner .next {
+            left: 33%;
+        }
+        .carousel-inner .prev {
+            left: -33%;
+        }
+    }
+}

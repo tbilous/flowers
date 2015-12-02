@@ -199,6 +199,81 @@ a, button, input, textarea {
     }
 }
 
+.contact-group {
+    &.footer-c{
+        color: #c5107b;
+        li{
+            padding-right: 3em;
+            &:nth-last-child(1){
+                padding-right: 0;
+            }
+        }
+        margin: 0;
+        float: right;
+    }
+    font-size: 1.4em;
+    margin-top: 1.4em;
+    text-align: center;
+    @media (min-width: 768px) {
+        float: right;
+    }
+    li {
+        margin-bottom: 5px;
+        span {
+            position: relative;
+            display: inline-block;
+            &:before {
+                content: '';
+                width: 1.2em;
+                height: 1.2em;
+                position: absolute;
+                left: -2em;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &:nth-child(1) {
+            display: inline-block;
+            position: relative;
+            span:nth-last-of-type(1) {
+                &::before {
+                    background-image: url("../img/icons/i-mts.png");
+                }
+            }
+            .icon-c {
+                position: absolute;
+                content: '';
+                width: 1.2em;
+                height: 1.2em;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                &.viber {
+                    background-image: url("../img/icons/icon-viber.png");
+                    left: -5em;
+                }
+                &.whatsapp {
+                    background-image: url("../img/icons/icon-whatsapp.png");
+                    left: -3.5em;
+                }
+            }
+        }
+        &:nth-child(2) {
+            span {
+                &:before {
+                    background-image: url("../img/icons/i-life.png");
+                }
+            }
+        }
+        &:nth-child(3) {
+            span {
+                &:before {
+                    background-image: url("../img/icons/i-kyivstar.png");
+                }
+            }
+        }
+    }
+}
 .animated {
     opacity: 0;
     &.visible {
@@ -276,6 +351,9 @@ section{
     background: url("../img/border-line.png") repeat-x;
     &.white{
         background: url("../img/border-line-white.png") repeat-x;
+    }
+    &.grey{
+        background: url("../img/border-line-grey.png") repeat-x;
     }
     &.top {
         top: 0;

@@ -10,11 +10,11 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
-    <!--{{CUT-START}}-->
-    <link rel="stylesheet" href="css/styles.css">
-    <!--{{CUT-END}}-->
 
-    <link rel="stylesheet" href="css/{{MAIN_CSS_FILE}}">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <!--<link rel="stylesheet" href="css/{{MAIN_CSS_FILE}}">-->
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
@@ -43,8 +43,8 @@
                     <li><a href="#home">О нас</a></li>
                     <li><a href="#">Преимущества</a></li>
                     <li><a href="#products">Букеты</a></li>
-                    <li><a href="#">Подарки</a></li>
-                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#gifts">Подарки</a></li>
+                    <li><a href="#feedback">Отзывы</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-3">
-                    <img src="img/logo.jpg" class="img-responsive logo-img" alt="logo">
+                    <img src="img/logo.png" class="img-responsive logo-img" alt="logo">
                 </div>
                 <div class="col-sm-6 text-center">
                     <h3 class="text-uppercase">Нужен букет? Звони!</h3>
@@ -735,7 +735,7 @@
         </div>
     </div>
 </section>
-<section class="extra-section">
+<section class="extra-section" id="gifts">
     <div class="container">
         <h2 class="text-center">Сделай подарок запоминающимся!</h2>
 
@@ -842,7 +842,7 @@
         </div>
     </div>
 </div>
-<div class="video">
+<div class="video-section">
     <div class="section-border top"></div>
     <div class="container">
         <div class="row">
@@ -874,7 +874,7 @@
     </div>
     <div class="section-border bottom"></div>
 </div>
-<section class="feedback" id="feedback">
+<section class="feedback-section" id="feedback">
     <div class="container">
         <div class="section-header">
             <h2 class="heading">
@@ -882,79 +882,185 @@
             </h2>
         </div>
         <div class="section-body">
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class="gallery-wrapper carousel slide carousel-fade" data-ride="carousel" data-type="multi"
-                         data-interval="0"
-                         id="feedbackCarousel">
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <div class="col-xs-4">
-                                    <div class="gallery-block great">
-                                        <a href="img/gallery/gallery1.jpg" class="gallery-photo"
-                                           data-lightbox="gallery" data-title="">
-                                            <span class="i-block ion-android-search"></span>
-                                        </a>
-
-                                        <div class="spacer"></div>
-                                    </div>
+            <div class=" carousel slide " data-ride="carousel" data-type="multi"
+                 data-interval="0"
+                 id="feedbackCarousel">
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="feedback-block">
+                                <div class="feedback-text">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Doloribus
+                                    accusamus expedita repellat similique
+                                    odio aspernatur ex, architecto eaque
+                                    quo suscipit.
                                 </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-xs-4">
-                                    <div class="gallery-block">
-                                        <a href="img/gallery/gallery2.jpg" class="gallery-photo"
-                                           data-lightbox="gallery" data-title="">
-                                            <span class="i-block ion-android-search"></span>
-                                        </a>
-
-                                        <div class="spacer"></div>
-                                    </div>
-                                    <div class="gallery-block">
-                                        <a href="img/gallery/gallery3.jpg" class="gallery-photo"
-                                           data-lightbox="gallery" data-title="">
-                                            <span class="i-block ion-android-search"></span>
-                                        </a>
-
-                                        <div class="spacer"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="col-xs-4">
-                                    <div class="gallery-block">
-                                        <a href="img/gallery/gallery4.jpg" class="gallery-photo"
-                                           data-lightbox="gallery" data-title="">
-                                            <span class="i-block ion-android-search"></span>
-                                        </a>
-
-                                        <div class="spacer"></div>
-                                    </div>
-                                    <div class="gallery-block">
-                                        <a href="img/gallery/gallery5.jpg" class="gallery-photo"
-                                           data-lightbox="gallery" data-title="">
-                                            <span class="i-block ion-android-search"></span>
-                                        </a>
-
-                                        <div class="spacer"></div>
-                                    </div>
-                                </div>
+                                <ul class="feedback-sign list-inline">
+                                    <li><img src="img/ava.jpg" class="" alt="avatar"></li>
+                                    <li><span>Александр</span> <br> <span>г.Киев</span> </li>
+                                </ul>
                             </div>
                         </div>
-                        <a class="left carousel-control" href="#feedbackCarousel" data-slide="prev">
-                            <span class="ion ion-ios-arrow-left"></span>
-                        </a>
-                        <a class="right carousel-control" href="#feedbackCarousel" data-slide="next">
-                            <span class="ion ion-ios-arrow-right"></span>
-                        </a>
+                    </div>
+                    <div class="item">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="feedback-block">
+                                <div class="feedback-text">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Doloribus
+                                    accusamus expedita repellat similique
+                                    odio aspernatur ex, architecto eaque
+                                    quo suscipit.
+                                </div>
+                                <ul class="feedback-sign list-inline">
+                                    <li><img src="img/ava.jpg" class="" alt="avatar"></li>
+                                    <li><span>Александр</span> <br> <span>г.Киев</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="feedback-block">
+                                <div class="feedback-text">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Doloribus
+                                    accusamus expedita repellat similique
+                                    odio aspernatur ex, architecto eaque
+                                    quo suscipit.
+                                </div>
+                                <ul class="feedback-sign list-inline">
+                                    <li><img src="img/ava.jpg" class="" alt="avatar"></li>
+                                    <li><span>Александр</span> <br> <span>г.Киев</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="feedback-block">
+                                <div class="feedback-text">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Doloribus
+                                    accusamus expedita repellat similique
+                                    odio aspernatur ex, architecto eaque
+                                    quo suscipit.
+                                </div>
+                                <ul class="feedback-sign list-inline">
+                                    <li><img src="img/ava.jpg" class="" alt="avatar"></li>
+                                    <li><span>Александр</span> <br> <span>г.Киев</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="feedback-block">
+                                <div class="feedback-text">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Doloribus
+                                    accusamus expedita repellat similique
+                                    odio aspernatur ex, architecto eaque
+                                    quo suscipit.
+                                </div>
+                                <ul class="feedback-sign list-inline">
+                                    <li><img src="img/ava.jpg" class="" alt="avatar"></li>
+                                    <li><span>Александр</span> <br> <span>г.Киев</span> </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="col-sm-4 col-xs-12">
+                            <div class="feedback-block">
+                                <div class="feedback-text">
+                                    Lorem ipsum dolor sit amet,
+                                    consectetur adipisicing elit. Doloribus
+                                    accusamus expedita repellat similique
+                                    odio aspernatur ex, architecto eaque
+                                    quo suscipit.
+                                </div>
+                                <ul class="feedback-sign list-inline">
+                                    <li><img src="img/ava.jpg" class="" alt="avatar"></li>
+                                    <li><span>Александр</span> <br> <span>г.Киев</span> </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <a class="left carousel-control" href="#feedbackCarousel" data-slide="prev">
+                    <span class="ion ion-ios-arrow-left"></span>
+                </a>
+                <a class="right carousel-control" href="#feedbackCarousel" data-slide="next">
+                    <span class="ion ion-ios-arrow-right"></span>
+                </a>
             </div>
         </div>
     </div>
 </section>
-<!-- Add your site or application content here -->
-<p>Hello world! This is HTML5 Boilerplate.</p>
+<footer class="footer">
+    <div class="section-border top grey"></div>
+    <div class="container">
+        <div class="footer-heading text-center">
+            <span class="text-nowrap">Появились вопросы?</span>
+            <span class="text-nowrap">Оставьте заявку,</span>
+            <span class="text-nowrap">наш менеджер свяжется с вами!</span>
+        </div>
+        <div class="row relative">
+            <div class="col-lg-4 visible-lg"></div>
+            <div class="col-lg-4 col-md-12">
+                <form class="callback-form" id="footerForm">
+                    <div class="input-group">
+                        <input type="hidden" value="Не могу выбрать букет">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="ваше имя" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="text" name="phone" placeholder="ваш телефон" required>
+                    </div>
+                    <input type="submit" class="btn btn-md btn-danger" value="СВЯЗАТЬСЯ С МЕНЕДЖЕРОМ">
+                </form>
+            </div>
+            <div class="col-lg-4 visible-lg">
+                <ul class="list-unstyled social-footer">
+                    <li>
+                        <a href="http://instagram.com/iris_flowers_kiev" target="_blank">
+                            <img src="img/icons/icon-inst.png" alt="instagramm">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://vk.com/iris_flowers_kiev" target="_blank">
+                            <img src="img/icons/icon-vk.png" alt="vkontakte">
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-inline nav-footer">
+                    <li><a href="#home">О нас</a></li>
+                    <li><a href="#">Преимущества</a></li>
+                    <li><a href="#products">Букеты</a></li>
+                    <li><a href="#gifts">Подарки</a></li>
+                    <li><a href="#feedback">Отзывы</a></li>
+                </ul>
+            </div>
+            <img src="img/logo.png" class="img-responsive logo-img visible-lg" alt="logo">
+        </div>
+        <div class="bottom-block">
+            <div class="copy">
+                Copyright 2015 Empire Of Marketing. All Rights Reserved.
+            </div>
+            <ul class="list-inline contact-group footer-c pull-right hidden-xs">
+                <li>
+                    <span class="icon-c viber"></span>
+                    <span class="icon-c whatsapp"></span>
+                    <span>0-800-50-50</span></li>
+                <li><span>0-800-50-50</span></li>
+                <li><span>0-800-50-50</span></li>
+            </ul>
+        </div>
+    </div>
+</footer>
 
 <div class="modal fade callback-modal" id="callbackModal" role="dialog" aria-hidden="true">
     <div class="modal-dialog ">
@@ -1029,7 +1135,8 @@
 
 </script>
 <script>
-    $('.carousel[data-type="multi"] .item').each(function () {
+
+    $('#galleryCarousel .item').each(function () {
         var next = $(this).next();
         if (!next.length) {
             next = $(this).siblings(':first');
@@ -1043,6 +1150,21 @@
             }
 
             next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+
+    $('#feedbackCarousel .item').each(function(){
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        if (next.next().length>0) {
+            next.next().children(':first-child').clone().appendTo($(this));
+        }
+        else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
         }
     });
 </script>

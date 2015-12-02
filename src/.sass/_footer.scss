@@ -1,0 +1,83 @@
+.footer{
+    position: relative;
+    background: url("../img/form-bg.jpg") repeat;
+    padding: 2em 0 1em;
+    .section-border{
+        &.top{
+            top:5px
+        }
+    }
+    .callback-form{
+        margin-bottom: 2em;
+        input {
+            width: 100%;
+            max-width: 360px;
+            height: 2.5em;
+            padding: 0;
+            line-height: 2.5em;
+            font-size: 1.2em;
+            &[type='text'] {
+                padding-left: 2em;
+                &::-webkit-input-placeholder {
+                    color: $gray-light;
+                }
+                border: 1px solid $gray-light;
+                border-radius: $border-radius-base;
+                background: no-repeat 5px center;
+                background-color: white;
+                &:focus,
+                &:active {
+                    border-color: $brand-danger;
+                    color: $gray-light;
+                    background-color: rgba(255,255,255,.5);
+                }
+                &[name='name'] {
+                    background-image: url("../img/icons/name_gray.png");
+                }
+                &[name='phone'] {
+                    background-image: url("../img/icons/phone_gray.png");
+                }
+            }
+        }
+    }
+    .logo-img{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        max-width: 190px;
+        margin-left: 15px;
+    }
+}
+.footer-heading{
+    font-size: 2.3em;
+    font-family: 'RalewaySemiBold', sans-serif;
+}
+.social-footer{
+    margin-top: 2em;
+    margin-left: 3em;
+    li{
+        margin-bottom: .5em;
+    }
+}
+.nav-footer{
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 4em;
+    text-transform: uppercase;
+    a{
+        color: $text-color;
+        text-decoration: none;
+        font-size: 12px;
+    }
+}
+.copy{
+    float: left;
+    @media all and (max-width: $screen-lg-min) {
+        float: none;
+        text-align: center;
+    }
+}
+.bottom-block{
+    padding-top: 1em;
+    border-top: 1px solid $gray-light;
+}
