@@ -7,14 +7,31 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/favicons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="img/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="img/favicons/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="img/favicons/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon"/>
 
+    <!--{{CUT-START}}-->
     <link rel="stylesheet" href="css/styles.css">
+    <!--{{CUT-END}}-->
 
-
-    <!--<link rel="stylesheet" href="css/{{MAIN_CSS_FILE}}">-->
+    <link rel="stylesheet" href="css/{{MAIN_CSS_FILE}}">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
@@ -40,11 +57,11 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav text-uppercase navbar-main">
-                    <li><a href="#home">О нас</a></li>
-                    <li><a href="#">Преимущества</a></li>
-                    <li><a href="#products">Букеты</a></li>
-                    <li><a href="#gifts">Подарки</a></li>
-                    <li><a href="#feedback">Отзывы</a></li>
+                    <li><a class="anchor" href="#home">О нас</a></li>
+                    <li><a class="anchor"  href="#">Преимущества</a></li>
+                    <li><a class="anchor"  href="#products">Букеты</a></li>
+                    <li><a class="anchor"  href="#gifts">Подарки</a></li>
+                    <li><a class="anchor"  href="#feedback">Отзывы</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -121,10 +138,10 @@
                             Доставка цветов в Киеве
                         </h1>
 
-<!--                        <h1 class="bold text-uppercase">
-                            <span class="text-nowrap">Розы от 99 грн <br></span>
-                            <span class="text-nowrap">за штуку!</span>
-                        </h1>-->
+                        <!--                        <h1 class="bold text-uppercase">
+                                                    <span class="text-nowrap">Розы от 99 грн <br></span>
+                                                    <span class="text-nowrap">за штуку!</span>
+                                                </h1>-->
                     </div>
                 </div>
             </div>
@@ -147,7 +164,7 @@
                         </h3>
                         <span class="sub-heading">Закажи сейчас и получи бесплатную доставку!</span>
                     </div>
-                    <input type="hidden" name="head" value="бесплатная доставка">
+                    <input type="hidden" name="manifest" value="бесплатная доставка">
 
                     <div class="input-group i-icons person">
                         <input class="" type="text" name="name" placeholder="введите имя" required>
@@ -556,7 +573,7 @@
             </div>
             <form class="callback-form" id="callbackForm">
                 <div class="input-group">
-                    <input type="hidden" value="Не могу выбрать букет">
+                    <input type="hidden" name="manifest" value="Не могу выбрать букет">
                 </div>
                 <div class="input-group">
                     <input type="text" name="name" placeholder="ваше имя" required>
@@ -716,7 +733,7 @@
             <form class="work-form text-center" id="workForm">
                 <div class="row">
                     <div class="col-sm-4">
-                        <input type="hidden" value="Заказ букета">
+                        <input type="hidden" name="manifest" value="Заказ букета">
                         <input type="text" name="name" placeholder="ваше имя" required>
                     </div>
                     <div class="col-sm-4">
@@ -809,7 +826,7 @@
                                 </h3>
                                 <span class="sub-heading">Закажи сейчас и получи бесплатную доставку!</span>
                             </div>
-                            <input type="hidden" name="head" value="бесплатная доставка">
+                            <input type="hidden" name="manifest" value="бесплатная доставка">
 
                             <div class="input-group i-icons person">
                                 <input class="" type="text" name="name" placeholder="введите имя" required>
@@ -1011,7 +1028,7 @@
             <div class="col-lg-4 col-md-12">
                 <form class="callback-form" id="footerForm">
                     <div class="input-group">
-                        <input type="hidden" value="Не могу выбрать букет">
+                        <input type="hidden" name="manifest" value="Не могу выбрать букет">
                     </div>
                     <div class="input-group">
                         <input type="text" name="name" placeholder="ваше имя" required>
@@ -1036,11 +1053,11 @@
                     </li>
                 </ul>
                 <ul class="list-inline nav-footer">
-                    <li><a href="#home">О нас</a></li>
-                    <li><a href="#">Преимущества</a></li>
-                    <li><a href="#products">Букеты</a></li>
-                    <li><a href="#gifts">Подарки</a></li>
-                    <li><a href="#feedback">Отзывы</a></li>
+                    <li><a class="anchor"  href="#home">О нас</a></li>
+                    <li><a class="anchor"  href="#">Преимущества</a></li>
+                    <li><a class="anchor"  href="#products">Букеты</a></li>
+                    <li><a class="anchor"  href="#gifts">Подарки</a></li>
+                    <li><a class="anchor"  href="#feedback">Отзывы</a></li>
                 </ul>
             </div>
             <img src="img/logo.png" class="img-responsive logo-img visible-lg" alt="logo">
@@ -1083,7 +1100,7 @@
                 <p class="text-center">Заполните форму и мы свяжемся с вами</p>
 
                 <form id="requestForm" class="text-center">
-                    <input name="head" type="hidden" value="Order"/>
+                    <input name="head" type="hidden" name="manifest"  value="Запрос звонка"/>
 
                     <div class="input-group">
                         <input name="name" class="name_input" type="text" required="required"
@@ -1109,45 +1126,40 @@
 <script src="assets/js/collapse.js"></script>
 <script src="assets/js/scrollspy.js"></script>
 <script src="assets/js/dropdown.js"></script>
-<script src="assets/js/modal.js"></script>
+
 <script src="assets/js/transition.js"></script>
 <script src="assets/js/carousel.js"></script>
 <!--{{CUT-END}}-->
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/{{JQUERY_VERSION}}/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
-
-<script src="js/{{MAIN_JS_FILE}}"></script>
 <script src="js/vendor/lightbox-plus-jquery.min.js"></script>
+<script src="js/{{MAIN_JS_FILE}}"></script>
 <script src="js/vendor/moment.min.js"></script>
 <script src="js/vendor/flipclock.min.js"></script>
 <script src="js/vendor/jquery.countdown.min.js"></script>
 <script src="js/plugins.js"></script>
+
 <script>
     var tomorrow = moment().endOf('day').valueOf() + 1;
     var now = moment().valueOf();
     var interval = (tomorrow - now) / 1000;
-    var interval2 = (moment().add(2, 'hour').valueOf() - now) / 1000;
     var clock = $('#top-clock').FlipClock(interval, {
         clockFace: 'HourlyCounter',
         countdown: true,
         language: 'ru'
     });
-    // top-clock-wrapper
+
     var finalDate = moment().add(2, 'hour').valueOf();
     var finalDateClock = moment().add(2, 'hour');
     function finalTime() {
         $('.top-clock-wrapper').html(moment().add(2, 'hour').format("DD.MM.YYYY с HH:mm:ss"));
     }
-    finalTime(function() {
+    finalTime(function () {
         $('.top-clock-wrapper').html(moment().add(2, 'hour').format("DD:MM:YY HH:mm"));
     });
-/*
-    setInterval(function() {
-       finalTime()
-    }, 2000);*/
-//    setInterval(finalTime(), 2000);
-    setInterval(function(){
+
+    setInterval(function () {
         finalTime();
     }, 1000);
 

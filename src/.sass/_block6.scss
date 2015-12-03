@@ -9,6 +9,10 @@
 .body-clock{
     position: relative;
     padding-left: 3.5em;
+    .top-clock-wrapper{
+        color: $brand-danger;
+        font-size: 1.2em;
+    }
     &::before{
         content: '';
         width: 3em;
