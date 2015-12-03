@@ -87,11 +87,13 @@
         }
     }
     h1 {
-        -webkit-text-fill-color: transparent;
+/*        -webkit-text-fill-color: transparent;
         background: linear-gradient(transparent, transparent),
                     url('../img/text-bg.jpg') repeat center;
         -webkit-background-clip: text;
-        margin-top: .5em;
+        margin-top: .5em;*/
+        color: $brand-danger;
+        font-weight: 900;
     }
     .form-group {
         .time-delivery, .body-form{
@@ -101,6 +103,9 @@
         bottom: 0;
         right: 1%;
         max-width: 295px;
+        @media all and (min-width: 1300px) {
+            right: 15%;
+        }
         .time-delivery{
             border-radius: $border-radius-large;
             background: url("../img/form-bg.jpg");
@@ -112,6 +117,12 @@
         }
         .top-clock-heading{
             font-size: 1.1em;
+        }
+        .top-clock-wrapper{
+
+            color: $brand-danger;
+            font-size: 18px;
+            vertical-align: middle;
         }
         .top-clock{
             padding: 5px 14px;
