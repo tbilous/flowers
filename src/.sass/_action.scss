@@ -29,6 +29,15 @@ $input-text-color: $gray-light;
     border: 1px dotted $form-border-color;
     border-radius: $border-radius-base;
     padding-top: 1em;
+    &.header-form{
+        padding-top: 0;
+        .form-header{
+            margin-bottom: 0;
+        }
+        .submit-wrapper{
+            margin-top: 0;
+        }
+    }
 }
 .body-form{
     font-family: 'LatoWeb', sans-serif;

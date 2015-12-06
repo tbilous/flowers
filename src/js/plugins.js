@@ -36,7 +36,8 @@ $(document).ready(function () {
             parent.css('backgroundImage', 'url(' + url + ')');
         });
     }
-    window.onload = thumbsBg;
+    // window.onload = thumbsBg;
+    thumbsBg();
 
 
 
@@ -126,9 +127,41 @@ $(document).ready(function () {
             watcher.destroy
         });
         watcher.exitViewport(function () {
-            //console.log(this + ' ' + action + ' ' + 'I have left the viewport');
+            // console.log(this + ' ' + action + ' ' + 'I have left the viewport');
             $(element).removeClass(action);
             watcher.destroy
         });
     });
+    function repeatTicker() {
+        var list=$('.flower-transition li');
+        var pause = 9000;
+        var count = $(list).length;
+        console.log(count);
+
+        list.each(function(i) {
+            $(this).delay(i * pause).animate({left:"-100%", opacity:"1"},"slow").delay(pause - 3000).animate({left:"0%", opacity:"0"},"fast");
+        });
+        setTimeout(repeatTicker, pause * count);
+    }
+    window.onload = function(){
+        setTimeout(function(){
+            repeatTicker();
+        }, 5000);
+    };
 });
+/*
+$('.flower-transition li').each(function(i) {
+    $(this).delay(i * 800).animate({'opacity': 1}, 800).animate({'opacity': 0}, 800);
+});*/
+/*
+$('.flower-transition li').each(function(i){
+    setInterval(function(){
+       $(this).delay(i * 800).animate({left:"-100%"},"slow").animate({left:"0%"},"slow");
+    }, 5000);
+});
+*/
+
+//Call on page load
+//$(tick);
+
+

@@ -14,13 +14,18 @@
             margin-left: 20px;
         }
     }
+
     .navbar{
+        //background: url("../img/top-btn-bg.jpg");
         .i-icons:before {
-            left: 0;
-            top: .6em;
+            left: 1em;
+            top: 38%;
             padding: 0;
             font-size: 1em;
         }
+        //border: none;
+
+        //box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.4), inset 0 0 1px 0 rgba(255, 255, 255, 0.6);
     }
     .navbar-main {
         li {
@@ -50,29 +55,23 @@
         box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.4), inset 0 0 1px 0 rgba(255, 255, 255, 0.6);
         position: relative;
         color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 100%;
         .btn-img-label {
-            margin-left: 8px;
+            //margin-left: 8px;
         }
         .btn-img-label, .btn-text-label {
             position: relative;
         }
 
-        background-image: url("../img/top-btn-bg.jpg");
-        .shadow {
-            display: block;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
-            @include background-image(linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%));
+        //background-image: url("../img/top-btn-bg.jpg");
 
-        }
         &:hover,
         &:focus,
         &:active {
             box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-            .shadow {
+            .shadow-btn {
                 // Needs latest Compass, add '@import "compass"' to your scss
                 // Permalink - use to edit and share this gradient:
                 // http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+35,0.65+100
@@ -81,7 +80,7 @@
         }
     }
     .logo-img {
-        margin-top: 1em;
+        //margin-top: 1em;
         @media (max-width: 768px) {
             margin: 0 auto;
         }
@@ -94,13 +93,16 @@
         margin-top: .5em;*/
         color: $brand-danger;
         font-weight: 900;
+        font-size: 3.5em;
+        max-width: 500px;
+        margin: 0 auto;
     }
     .form-group {
         .time-delivery, .body-form{
             box-shadow: 0 0 3px 1px $gray-light;
         }
         position: absolute;
-        bottom: 0;
+        //bottom: 0;
         right: 1%;
         max-width: 295px;
         @media all and (min-width: 1300px) {
@@ -135,7 +137,7 @@
 }
 .main-header{
     position: relative;
-    min-height: 788px;
+    min-height: 550px;
     padding-top: 1.5em;
     background-size: cover;
     box-shadow: inset 0 0 3px 0 rgba(231,221,227,1);
@@ -162,17 +164,136 @@
     }
 }
 .delivery-icons {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 1.5em;
     li {
-        padding: 0 .5em;
-        font-size: 1.2em;
+        text-align: center;
+        width: 32%;
         img{
-            width: 2em;
+            display: block;
+            margin: 0 auto;
         }
         span {
-            padding-left: .5em;
+            //padding-left: .5em;
+            max-width: 6em;
+            display: inline-block;
         }
     }
     @media all and (max-width: 665px) {
         display: none;
+    }
+}
+.contact-group {
+    font-size: 1.4em;
+    margin-top: .5em;
+    text-align: center;
+    @media (min-width: 768px) {
+        float: right;
+    }
+    li {
+        margin-bottom: 5px;
+        span {
+            position: relative;
+            display: inline-block;
+            &:before {
+                content: '';
+                width: 1.2em;
+                height: 1.2em;
+                position: absolute;
+                left: -2em;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &:nth-child(1) {
+            display: inline-block;
+            position: relative;
+            span:nth-last-of-type(1) {
+                &::before {
+                    background-image: url("../img/icons/i-mts.png");
+                }
+            }
+            .icon-c {
+                position: absolute;
+                content: '';
+                width: 1.2em;
+                height: 1.2em;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                &.viber {
+                    background-image: url("../img/icons/icon-viber.png");
+                    left: -5em;
+                }
+                &.whatsapp {
+                    background-image: url("../img/icons/icon-whatsapp.png");
+                    left: -3.5em;
+                }
+            }
+        }
+        &:nth-child(2) {
+            span {
+                &:before {
+                    background-image: url("../img/icons/i-life.png");
+                }
+            }
+        }
+        &:nth-child(3) {
+            span {
+                &:before {
+                    background-image: url("../img/icons/i-kyivstar.png");
+                }
+            }
+        }
+    }
+}
+@media all and (min-width: 768px) {
+    #navbar{
+        display: flex !important;
+        justify-content: center;
+    }
+}
+.header-form{
+    bottom: 0;
+    .body-form{
+        position: relative;
+    }
+    .flower-transition{
+        content: '';
+        height: 50%;
+        top: 50%;
+        margin-top: -35%;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        li{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: white;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            //left: -100%;
+            opacity: 0;
+            &:nth-child(1){
+                background: red;
+                //left: -100%;
+            }
+            &:nth-child(2){
+                background: rebeccapurple;
+            }
+            &:nth-child(3){
+                background: orange;
+            }
+            &:nth-child(4){
+                background: orangered;
+            }
+            &:nth-child(5){
+                background: darkorange;
+            }
+        }
     }
 }
