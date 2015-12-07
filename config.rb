@@ -1,4 +1,4 @@
-require 'compass/import-once/activate'
+# require 'compass/import-once/activate'
 require 'autoprefixer-rails'
 
 # Require any additional compass plugins here.
@@ -10,7 +10,7 @@ sass_dir = '/src/.sass'
 images_dir = 'src/img'
 javascripts_dir = 'src/js'
 sourcemap     = true
-output_style  = :compressed
+# output_style  = :compressed
 sass_options  = { cache: false }
 line_comments = false
 
