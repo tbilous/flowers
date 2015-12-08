@@ -19,7 +19,7 @@
         //background: url("../img/top-btn-bg.jpg");
         .i-icons:before {
             left: 1em;
-            top: 38%;
+            top: 25%;
             padding: 0;
             font-size: 1em;
         }
@@ -57,52 +57,30 @@
         color: white;
         padding-left: 5px;
         padding-right: 5px;
-        width: 100%;
-        .btn-img-label {
-            //margin-left: 8px;
-        }
+        font-size: .9em;
         .btn-img-label, .btn-text-label {
             position: relative;
         }
-
-        //background-image: url("../img/top-btn-bg.jpg");
-
-        &:hover,
-        &:focus,
-        &:active {
-            box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.2);
-            .shadow-btn {
-                // Needs latest Compass, add '@import "compass"' to your scss
-                // Permalink - use to edit and share this gradient:
-                // http://colorzilla.com/gradient-editor/#000000+0,000000+100&amp;0+35,0.65+100
-                @include background-image(linear-gradient(top, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 0.0) 100%));
-            }
-        }
-    }
     .logo-img {
-        //margin-top: 1em;
         @media (max-width: 768px) {
             margin: 0 auto;
         }
     }
     h1 {
-/*        -webkit-text-fill-color: transparent;
-        background: linear-gradient(transparent, transparent),
-                    url('../img/text-bg.jpg') repeat center;
-        -webkit-background-clip: text;
-        margin-top: .5em;*/
         color: $brand-danger;
         font-weight: 900;
         font-size: 3.5em;
         max-width: 500px;
         margin: 0 auto;
     }
+
+}
+.main-header{
     .form-group {
         .time-delivery, .body-form{
             box-shadow: 0 0 3px 1px $gray-light;
         }
         position: absolute;
-        //bottom: 0;
         right: 1%;
         max-width: 295px;
         @media all and (min-width: 1300px) {
@@ -134,8 +112,6 @@
             position: static;
         }
     }
-}
-.main-header{
     position: relative;
     min-height: 550px;
     padding-top: 1.5em;
@@ -175,9 +151,10 @@
             margin: 0 auto;
         }
         span {
-            //padding-left: .5em;
             max-width: 6em;
             display: inline-block;
+            line-height: 1;
+            font-size: .9em;
         }
     }
     @media all and (max-width: 665px) {
@@ -188,6 +165,7 @@
     font-size: 1.4em;
     margin-top: .5em;
     text-align: center;
+    margin-bottom: 0;
     @media (min-width: 768px) {
         float: right;
     }
@@ -296,4 +274,17 @@
             }
         }
     }
+}
+}
+
+
+.top-header-group{
+    h4{
+        margin-top: 1.5em;
+    }
+}
+
+.header-form{
+    background-image: none;
+    background-color: $brand-info;
 }
