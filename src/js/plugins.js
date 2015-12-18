@@ -133,11 +133,9 @@ $(document).ready(function () {
         });
     });
     function repeatTicker() {
-        var list=$('.flower-transition li');
+        var list = $('.flower-transition li');
         var pause = 9000;
         var count = $(list).length;
-        console.log(count);
-
         list.each(function(i) {
             $(this).delay(i * pause).animate({left:"-100%", opacity:"1"},"slow").delay(pause - 3000).animate({left:"0%", opacity:"0"},"fast");
         });

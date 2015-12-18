@@ -238,10 +238,9 @@
         position: relative;
     }
     .flower-transition{
-        content: '';
-        height: 50%;
-        top: 50%;
-        margin-top: -35%;
+        //content: '';
+        height: 100%;
+        top: -5%;
         position: absolute;
         width: 100%;
         left: 0;
@@ -254,29 +253,34 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            //left: -100%;
             opacity: 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            a{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
             &:nth-child(1){
-                background: red;
-                //left: -100%;
+                background-image: url("../img/arm1.png");
             }
             &:nth-child(2){
-                background: rebeccapurple;
+                background-image: url("../img/arm2.png");
             }
             &:nth-child(3){
-                background: orange;
-            }
-            &:nth-child(4){
-                background: orangered;
-            }
-            &:nth-child(5){
-                background: darkorange;
+                background-image: url("../img/arm3.png");
             }
         }
     }
 }
 }
-
+.arrow-arm{
+    position: absolute;
+    height: 1.5em;
+    width: 100%;
+    bottom: -1.5em;
+    background: url("../img/arrow.png") no-repeat;
+}
 
 .top-header-group{
     h4{
