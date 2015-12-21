@@ -85,6 +85,7 @@ gulp.task('copy', [
 gulp.task('copy:.htaccess', function () {
     return gulp.src('node_modules/apache-server-configs/dist/.htaccess')
         .pipe(plugins.replace(/# ErrorDocument/g, 'ErrorDocument'))
+        .pipe(plugins.replace(/Options -MultiViews/g, '# Options -MultiViews'))
         .pipe(gulp.dest(dirs.dist));
 });
 

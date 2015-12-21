@@ -224,7 +224,7 @@
     <div class="section-body">
         <div class="container">
             <div class="gallery-wrapper carousel slide carousel-fade" data-ride="carousel" data-type="multi"
-                 data-interval="0"
+                 data-interval="7000"
                  id="galleryCarousel">
                 <div class="carousel-inner">
                     <div class="item active">
@@ -301,15 +301,9 @@
                     </div>
                     <div class="item">
                         <div class="col-xs-3">
-                            <div class="gallery-block">
-                                <a href="#" class="gallery-photo">
-                                    <span class="i-block ion-android-search"></span>
-                                </a>
-
-                                <div class="spacer"></div>
-                            </div>
-                            <div class="gallery-block">
-                                <a href="#" class="gallery-photo">
+                            <div class="gallery-block great">
+                                <a href="img/gallery/1_6g.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
                                     <span class="i-block ion-android-search"></span>
                                 </a>
 
@@ -320,14 +314,16 @@
                     <div class="item">
                         <div class="col-xs-3">
                             <div class="gallery-block">
-                                <a href="#" class="gallery-photo">
+                                <a href="img/gallery/1_1.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
                                     <span class="i-block ion-android-search"></span>
                                 </a>
 
                                 <div class="spacer"></div>
                             </div>
                             <div class="gallery-block">
-                                <a href="#" class="gallery-photo">
+                                <a href="img/gallery/1_2.jpg" class="gallery-photo"
+                                   data-lightbox="gallery" data-title="">
                                     <span class="i-block ion-android-search"></span>
                                 </a>
 
@@ -1168,20 +1164,6 @@
         }
     });
 
-    $('#feedbackCarousel .item').each(function () {
-        var next = $(this).next();
-        if (!next.length) {
-            next = $(this).siblings(':first');
-        }
-        next.children(':first-child').clone().appendTo($(this));
-
-        if (next.next().length > 0) {
-            next.next().children(':first-child').clone().appendTo($(this));
-        }
-        else {
-            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-        }
-    });
 </script>
 <script>
     lightbox.option({
@@ -1191,6 +1173,26 @@
         maxHeight: 750
     })
 </script>
+<script>
+    $('#warrantyCarousel .item').each(function () {
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        if (next.next().length > 0) {
+
+            next.next().children(':first-child').clone().appendTo($(this)).addClass('rightest');
+
+        }
+        else {
+            $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+
+        }
+    });
+</script>
+
 
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <!--        <script>

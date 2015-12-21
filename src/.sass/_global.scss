@@ -221,38 +221,55 @@ section{
     }
     font-family: 'RalewaySemiBold', sans-serif;
 }
+/*
+.carousel-inner .active.left  { left: -25%;             }
+.carousel-inner .active.right { left: 25%;              }
+.carousel-inner .next         { left: 25%               }
+.carousel-inner .prev         { left: -25%              }
+*/
 
+/*.carousel-inner > .item {
+    -webkit-transition: -webkit-transform 1.1s ease-in-out;
+    transition: -webkit-transform 1.1s ease-in-out;
+    transition: transform 1.1s ease-in-out;
+    transition-property: opacity;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-perspective: 1000px;
+    perspective: 1000px;
+}*/
+    /*
+    .carousel-fade {
+        .carousel-inner {
+            .item {
+                transition-property: opacity;
+            }
 
-.carousel-fade {
-    .carousel-inner {
-        .item {
-            transition-property: opacity;
+            .item,
+            .active.left,
+            .active.right {
+                opacity: 0;
+            }
+
+            .active,
+            .next.left,
+            .prev.right {
+                opacity: 1;
+            }
+
+            .next,
+            .prev,
+            .active.left,
+            .active.right {
+                left: 0;
+                transform: translate3d(0, 0, 0);
+            }
         }
-
-        .item,
-        .active.left,
-        .active.right {
-            opacity: 0;
-        }
-
-        .active,
-        .next.left,
-        .prev.right {
-            opacity: 1;
-        }
-
-        .next,
-        .prev,
-        .active.left,
-        .active.right {
-            left: 0;
-            transform: translate3d(0, 0, 0);
+        .carousel-control {
+            z-index: 2;
         }
     }
-    .carousel-control {
-        z-index: 2;
-    }
-}
+    */
 
 //Ion icons
 .ion{
