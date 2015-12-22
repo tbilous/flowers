@@ -878,8 +878,8 @@
             </h2>
         </div>
         <div class="section-body">
-            <div class=" carousel slide " data-ride="carousel" data-type="multi"
-                 data-interval="0"
+            <div class="carousel slide " data-ride="carousel" data-type="multi"
+                 data-interval="3000"
                  id="feedbackCarousel">
                 <div class="carousel-inner">
                     <div class="item active">
@@ -911,7 +911,7 @@
                                 </div>
                                 <ul class="feedback-sign list-inline">
                                     <li><img src="img/ava.jpg" class="" alt="avatar"></li>
-                                    <li><span>Александр</span> <br> <span>г.Киев</span></li>
+                                    <li><span>Вася</span> <br> <span>г.Киев</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -928,7 +928,7 @@
                                 </div>
                                 <ul class="feedback-sign list-inline">
                                     <li><img src="img/ava.jpg" class="" alt="avatar"></li>
-                                    <li><span>Александр</span> <br> <span>г.Киев</span></li>
+                                    <li><span>Петя</span> <br> <span>г.Киев</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -945,7 +945,7 @@
                                 </div>
                                 <ul class="feedback-sign list-inline">
                                     <li><img src="img/ava.jpg" class="" alt="avatar"></li>
-                                    <li><span>Александр</span> <br> <span>г.Киев</span></li>
+                                    <li><span>Коля</span> <br> <span>г.Киев</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -962,7 +962,7 @@
                                 </div>
                                 <ul class="feedback-sign list-inline">
                                     <li><img src="img/ava.jpg" class="" alt="avatar"></li>
-                                    <li><span>Александр</span> <br> <span>г.Киев</span></li>
+                                    <li><span>Игорь</span> <br> <span>г.Киев</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -979,7 +979,7 @@
                                 </div>
                                 <ul class="feedback-sign list-inline">
                                     <li><img src="img/ava.jpg" class="" alt="avatar"></li>
-                                    <li><span>Александр</span> <br> <span>г.Киев</span></li>
+                                    <li><span>Изя</span> <br> <span>г.Киев</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -1174,7 +1174,7 @@
     })
 </script>
 <script>
-    $('#warrantyCarousel .item').each(function () {
+    $('#feedbackCarousel .item').each(function () {
         var next = $(this).next();
         if (!next.length) {
             next = $(this).siblings(':first');
