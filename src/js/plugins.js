@@ -234,10 +234,17 @@ $(document).ready(function () {
         });
     });
 
+    // prod card effects
+    var hoverOrClick = function () {
+        var hElement = $(this).find('.hovered');
+
+        if($(hElement).css('display') == 'none') {
+            hElement.fadeIn();
+        }
+        else {
+            hElement.fadeOut();
+        }
+    };
+    $('.card-photo').click(hoverOrClick).hover(hoverOrClick);
 });
-
-
-//Call on page load
-//$(tick);
-
 
