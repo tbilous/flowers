@@ -71,6 +71,7 @@ $(document).ready(function () {
         $('.modal-dialog').css('margin-top', marr / 2);
     });
 
+/*
     // MAIL FORM
     $("form").submit(function () {
         var formID = $(this).attr("id");
@@ -79,7 +80,6 @@ $(document).ready(function () {
             url: "mail.php", // mail script
             data: $(this).serialize()
         }).done(function () {
-            alert('send');
             $(this).find("input").val("");
             $('#' + formID).trigger("reset");
             $('#callbackModal').modal('show');
@@ -94,6 +94,7 @@ $(document).ready(function () {
             return false;
         }
     });
+*/
 
 
     //Scroll MONITOR
@@ -146,18 +147,95 @@ $(document).ready(function () {
             repeatTicker();
         }, 5000);
     };
+
+    jQuery(function ($) {
+        $('input[name=phone]').mask("+(380) (99) 999-99-99");
+    });
+
+    $('.send-form').click(function () {
+        var formID = ('#' + this.form.id);
+        $(formID).validate({
+            rules: {
+                name: {
+                    required: true,
+                    minlength: 3,
+                    maxlength: 16
+                },
+                comment: {
+                    required: true
+                },
+
+                phone: {
+                    //number: true,
+                    required: true
+                    //minlength: 21,
+                    //maxlength: 21
+                }
+            },
+            messages: {
+
+                name: {
+                    required: "Это поле обязательно для заполнения",
+                    minlength: "Должно быть минимум 3 символа",
+                    maxlength: "Максимальное число символов - 16"
+                },
+
+                phone: {
+                    //matches: "/\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/",
+                    required: "Это поле обязательно для заполнения"
+                    //minlength: "Номер должен быть минимум 20 символа",
+                    //maxlength: "Номер должен быть максимум 22 символов"
+                    //number: "Введите номер телефона"
+                },
+
+                comment: {
+                    required: "Это поле обязательно для заполнения"
+                }
+
+            },
+
+            submitHandler: function (form) {
+                var request;
+                var serializedData;
+                var inputs;
+                var callbackModalID;
+
+                serializedData = $(form).serialize();
+                inputs = $(formID).find('input, select, button, textarea');
+                callbackModalID = '#callbackModal';
+
+                request = $.ajax({
+                    url: "mail.php",
+                    type: "post",
+                    data: serializedData
+                });
+                request.done(function () {
+                    $(formID).trigger("reset");
+                    $(callbackModalID).modal('show');
+                    var parent = $(formID).closest('.modal');
+                    var modalID = ('#' + parent.attr("id"));
+                    if ($(modalID).hasClass('in')) {
+                        $(modalID).modal('hide');
+                        return false;
+                    } else {
+                        return false;
+                    }
+                });
+
+                request.fail(function (jqXHR, textStatus, errorThrown) {
+                    console.error(
+                        "The following error occured: " + textStatus, errorThrown);
+                });
+
+                request.always(function () {
+                    inputs.prop("disabled", true);
+                });
+            }
+        });
+    });
+
 });
-/*
-$('.flower-transition li').each(function(i) {
-    $(this).delay(i * 800).animate({'opacity': 1}, 800).animate({'opacity': 0}, 800);
-});*/
-/*
-$('.flower-transition li').each(function(i){
-    setInterval(function(){
-       $(this).delay(i * 800).animate({left:"-100%"},"slow").animate({left:"0%"},"slow");
-    }, 5000);
-});
-*/
+
 
 //Call on page load
 //$(tick);

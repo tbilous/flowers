@@ -304,3 +304,23 @@ section{
         bottom: 0;
     }
 }
+
+//validation
+
+input.error{
+    margin-bottom: .5em !important;
+}
+label.error {
+    color: $brand-danger !important;
+    font-weight: 300;
+    font-size: 80%;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    &::before {
+        content: '*';
+        position: absolute;
+        left: -5px;
+        top: 0;
+    }
+}
