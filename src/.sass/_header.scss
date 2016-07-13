@@ -227,34 +227,9 @@
     }
     li {
         margin-bottom: 5px;
-/*        span {
-            position: relative;
-            display: inline-block;
-            &:before {
-                content: '';
-                width: 1.2em;
-                height: 1.2em;
-                position: absolute;
-                left: -2em;
-                background-size: contain;
-                background-repeat: no-repeat;
-            }
-        }*/
-
-        /*        &:nth-child(2) {
-                    span {
-                        &:before {
-                            background-image: url("../img/icons/i-life.png");
-                        }
-                    }
-                }
-                &:nth-child(3) {
-                    span {
-                        &:before {
-                            background-image: url("../img/icons/i-kyivstar.png");
-                        }
-                    }
-                }*/
+        &:nth-last-child(2) {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -262,8 +237,8 @@
     margin-right: 5px;
     display: inline-block;
     content: '';
-    width: 1.2em;
-    height: 1.2em;
+    width: 1em;
+    height: 1em;
     background-size: 100%;
     background-repeat: no-repeat;
     &.viber {
@@ -275,13 +250,32 @@
         left: -3.5em;
     }
     &.mts {
-
         background-image: url("../img/icons/i-mts.png");
         left: -1.5em;
     }
+    &.ks {
+        background-image: url("../img/icons/new/kstar.png");
+    }
+    &.life {
+        background-image: url("../img/icons/new/life.png");
+        background-position: bottom;
+    }
+    &.skype {
+        background-image: url("../img/icons/new/skype.png");
+    }
 }
 .contact-number{
-    font-size: 1.2em;
+    //font-size: 1.2em;
+}
+.contact {
+    &-number {
+        display: block;
+        &-text {
+            display: inline-block;
+            vertical-align: text-bottom;
+            font-size: .9em;
+        }
+    }
 }
 
 .logo-img {

@@ -108,26 +108,10 @@ gulp.task('copy:license', function () {
     return gulp.src('LICENSE.txt')
         .pipe(gulp.dest(dirs.dist));
 });
-/*
- gulp.task('copy:main.css', function () {
-
- var banner = '/!*! HTML5 Boilerplate v' + pkg.version +
- ' | ' + pkg.license.type + ' License' +
- ' | ' + pkg.homepage + ' *!/\n\n';
-
- return gulp.src(dirs.src + '/css/' + mainStylesheet + '.css')
- .pipe(plugins.header(banner))
- .pipe(plugins.autoprefixer({
- browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
- cascade: false
- }))
- .pipe(gulp.dest(dirs.dist + '/css/'));
-
- });*/
 
 gulp.task('copy:minify-css', function () {
-    var banner = '/*!*! Taras Bilous: ' + 'tbilous@gmail.com' +
-        ' | ' + pkg.homepage + ' *!*/\n\n';
+    var banner = '/*!*! Taras Bilous: ' + ' tbilous@gmail.com' +
+        ' | ' + pkg.homepage + ' *!*/\n\n' + '.cbalink{display: none;}';
     return gulp.src(dirs.src + '/css/' + mainStylesheet + '.css')
         .pipe(plugins.header(banner))
         .pipe(rename({ suffix: '.min' }))

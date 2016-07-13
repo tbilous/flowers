@@ -2,16 +2,36 @@
     position: relative;
     background: url("../img/extra-bg.jpg");
     color: white;
-    .section-body{
+    .section-body {
         padding-top: 3em;
     }
-    .start-modal{
+    .start-modal {
         color: black;
         margin-top: 2em;
         background-color: white;
     }
-    .section-border{
+    .section-border {
         bottom: 8px;
+    }
+}
+
+.pay-section {
+    //background: url("../img/extra-bg.jpg");
+    //color: white;
+    p {
+        position: relative;
+        padding-left: 25px;
+    }
+    p, span {
+        font-size: 1.2em;
+    }
+    .btn-img-label {
+        position: absolute;
+        left: 1em;
+        top: -.5em;
+        &:before {
+            font-size: 1em;
+        }
     }
 }
 
