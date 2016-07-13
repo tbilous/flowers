@@ -3,6 +3,20 @@
 //noinspection ALL
 
 
+/* font-family: "SegoeUIBold"; */
+@font-face {
+    font-family: "SegoeUIBold";
+    src: url("../fonts/SegoeUIBold.eot");
+    src: url("../fonts/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIBold.woff") format("woff"),
+    url("../fonts/SegoeUIBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+.heading {
+    font-family: "SegoeUIBold", sans-serif;
+}
+
 /* font-family: "RalewaySemiBold"; */
 @font-face {
     font-family: "RalewaySemiBold";
@@ -27,6 +41,7 @@
 
 //noinspection ALL
 /* Webfont: Lato-Regular */
+//noinspection ALL
 @font-face {
     font-family: 'LatoWeb';
     src: url('../fonts/Lato-Regular.eot'); /* IE9 Compat Modes */

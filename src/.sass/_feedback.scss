@@ -37,7 +37,7 @@ $feedback-sign-name: #028b42;
         position: relative;
         background: $feedback-green;
         border-radius: 5px;
-        font-size: 1.2em;
+        font-size: 1em;
         &::after {
             content: '';
             position: absolute; /* Абсолютное позиционирование */

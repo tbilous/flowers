@@ -16,55 +16,83 @@
         background-size: cover;
         background-position: center;
         position: relative;
-        &-block{
+        &-block {
             position: absolute;
             width: 100%;
             height: 100%;
             background-size: cover;
             background-position: center;
-            &.card-15{
+            &.card-15 {
                 background-image: url("../img/prod/15_3.jpg");
-                &-hovered{
+                &-hovered {
                     background-image: url("../img/prod/15_4.jpg");
                 }
             }
+            &.card-19 {
+                background-image: url("../img/prod/19_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/19_3.jpg");
+                }
+            }
+            &.card-25 {
+                background-image: url("../img/prod/25_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/25_3.jpg");
+                }
+            }
+            &.card-35 {
+                background-image: url("../img/prod/35_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/35_2.jpg");
+                }
+            }
+            &.card-51 {
+                background-image: url("../img/prod/51_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/51_4.jpg");
+                }
+            }
+            &.card-75 {
+                background-image: url("../img/prod/75_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/75_2.jpg");
+                }
+            }
+            &.card-101 {
+                background-image: url("../img/prod/101_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/101_2.jpg");
+                }
+            }
+            &.card-151 {
+                background-image: url("../img/prod/151_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/151_2.jpg");
+                }
+            }
+            &.card-201 {
+                background-image: url("../img/prod/201_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/201_2.jpg");
+                }
+            }
+            &.card-bear {
+                background-image: url("../img/prod/bear_160.JPG");
+                &-hovered {
+                    background-image: url("../img/prod/bear_200.JPG");
+                }
+            }
+            &.sweet {
+                background-image: url("../img/prod/sweet-1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/sweet-2.JPG");
+                }
+            }
         }
-        &.card-1 {
-            background-image: url("../img/prod/1.jpg");
-        }
-        &.card-2 {
-            background-image: url("../img/prod/2.jpg");
-        }
-        &.card-3 {
-            background-image: url("../img/prod/3.jpg");
-        }
-        &.card-4 {
-            background-image: url("../img/prod/4.jpg");
-        }
-        &.card-5 {
-            background-image: url("../img/prod/5.jpg");
-        }
-        &.card-6 {
-            background-image: url("../img/prod/6.jpg");
-        }
-        &.card-7 {
-            background-image: url("../img/prod/7.jpg");
-        }
-        &.card-8 {
-            background-image: url("../img/prod/8.jpg");
-        }
+
         //offers
-        &.offer-1 {
-            background-image: url("../img/prod/offer51.jpg");
-        }
-        &.offer-2 {
-            background-image: url("../img/prod/offer101.jpg");
-        }
         &.offer-3 {
             background-image: url("../img/prod/offerbox.jpg");
-        }
-        &.offer-4 {
-            background-image: url("../img/prod/offer-big-bear.jpg");
         }
 
     }
@@ -168,10 +196,11 @@
         font-size: 1.2em;
     }
 }
-.special-offer{
+
+.special-offer {
     position: relative;
     background: url("../img/block-offer-bg.png");
-    .offer-header{
+    .offer-header {
         padding: 1em 0;
         margin-top: 0;
         text-align: center;

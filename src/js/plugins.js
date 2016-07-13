@@ -36,9 +36,9 @@ $(document).ready(function () {
             parent.css('backgroundImage', 'url(' + url + ')');
         });
     }
+
     // window.onload = thumbsBg;
     thumbsBg();
-
 
 
 // SCROLL TO ANCHOR
@@ -49,7 +49,7 @@ $(document).ready(function () {
             var $target = $(href);
             if ($target.length) {
                 var time = 1000;
-                $('html, body').animate({ scrollTop: $target.offset().top - fromTop }, time);
+                $('html, body').animate({scrollTop: $target.offset().top - fromTop}, time);
                 if (history && 'pushState' in history) {
                     history.pushState({}, document.title, window.location.pathname + href);
                     return false;
@@ -71,30 +71,30 @@ $(document).ready(function () {
         $('.modal-dialog').css('margin-top', marr / 2);
     });
 
-/*
-    // MAIL FORM
-    $("form").submit(function () {
-        var formID = $(this).attr("id");
-        $.ajax({
-            type: "POST",
-            url: "mail.php", // mail script
-            data: $(this).serialize()
-        }).done(function () {
-            $(this).find("input").val("");
-            $('#' + formID).trigger("reset");
-            $('#callbackModal').modal('show');
-        });
-        var parent = $(this).parents('.modal');
-        var modalID = parent.attr("id");
+    /*
+     // MAIL FORM
+     $("form").submit(function () {
+     var formID = $(this).attr("id");
+     $.ajax({
+     type: "POST",
+     url: "mail.php", // mail script
+     data: $(this).serialize()
+     }).done(function () {
+     $(this).find("input").val("");
+     $('#' + formID).trigger("reset");
+     $('#callbackModal').modal('show');
+     });
+     var parent = $(this).parents('.modal');
+     var modalID = parent.attr("id");
 
-        if ($('#' + modalID).hasClass('in')) {
-            $('#' + modalID).modal('hide');
-            return false;
-        } else {
-            return false;
-        }
-    });
-*/
+     if ($('#' + modalID).hasClass('in')) {
+     $('#' + modalID).modal('hide');
+     return false;
+     } else {
+     return false;
+     }
+     });
+     */
 
 
     //Scroll MONITOR
@@ -103,13 +103,13 @@ $(document).ready(function () {
         if ($(element).get(0).hasAttribute("data-bottom")) {
             var offsetBottom = $(this).data('bottom');
         }
-        else{
+        else {
             var offsetBottom = 100
         }
         if ($(element).get(0).hasAttribute("data-top")) {
             var offsetTop = $(this).data('top')
         }
-        else{
+        else {
             var offsetTop = 100
         }
         var watcher = scrollMonitor.create(element, {top: offsetTop, bottom: offsetBottom});
@@ -122,7 +122,7 @@ $(document).ready(function () {
                 $(element).css('animation-delay', delay + 's')
             }
             if ($(element).get(0).hasAttribute('data-value')) {
-              /*  runDigitFlow();  // RUN DIGIT FLOW .lost-count*/
+                /*  runDigitFlow();  // RUN DIGIT FLOW .lost-count*/
             }
             $(element).addClass(action);
             watcher.destroy
@@ -137,13 +137,17 @@ $(document).ready(function () {
         var list = $('.flower-transition li');
         var pause = 9000;
         var count = $(list).length;
-        list.each(function(i) {
-            $(this).delay(i * pause).animate({left:"-100%", opacity:"1"},"slow").delay(pause - 3000).animate({left:"0%", opacity:"0"},"fast");
+        list.each(function (i) {
+            $(this).delay(i * pause).animate({
+                left: "-100%",
+                opacity: "1"
+            }, "slow").delay(pause - 3000).animate({left: "0%", opacity: "0"}, "fast");
         });
         setTimeout(repeatTicker, pause * count);
     }
-    window.onload = function(){
-        setTimeout(function(){
+
+    window.onload = function () {
+        setTimeout(function () {
             repeatTicker();
         }, 5000);
     };
@@ -238,7 +242,7 @@ $(document).ready(function () {
     var hoverOrClick = function () {
         var hElement = $(this).find('.hovered');
 
-        if($(hElement).css('display') == 'none') {
+        if ($(hElement).css('display') == 'none') {
             hElement.fadeIn();
         }
         else {
