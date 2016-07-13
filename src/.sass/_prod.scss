@@ -85,7 +85,56 @@
             &.sweet {
                 background-image: url("../img/prod/sweet-1.jpg");
                 &-hovered {
-                    background-image: url("../img/prod/sweet-2.JPG");
+                    background-image: url("../img/prod/sweet-2.jpg");
+                }
+            }
+//13/07
+            &.card-hz-15 {
+                background-image: url("../img/prod/15_hriz.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/15_hriz.jpg");
+                }
+            }
+            &.card-hz-51 {
+                background-image: url("../img/prod/51_hriz_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/51_hriz_2.jpg");
+                }
+            }
+            &.card-hz-75 {
+                background-image: url("../img/prod/75_hriz.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/75_hriz.jpg");
+                }
+            }
+            &.card-hz-101 {
+                background-image: url("../img/prod/101_hriz_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/101_hriz_2.jpg");
+                }
+            }
+            &.card-als-15 {
+                background-image: url("../img/prod/15_als.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/15_als.jpg");
+                }
+            }
+            &.card-als-25 {
+                background-image: url("../img/prod/25_als_1.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/25_als_2.jpg");
+                }
+            }
+            &.card-als-41 {
+                background-image: url("../img/prod/41_als.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/41_als.jpg");
+                }
+            }
+            &.card-als-101 {
+                background-image: url("../img/prod/101_als.jpg");
+                &-hovered {
+                    background-image: url("../img/prod/101_als.jpg");
                 }
             }
         }

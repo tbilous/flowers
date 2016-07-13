@@ -124,23 +124,7 @@ gulp.task('copy:license', function () {
  .pipe(gulp.dest(dirs.dist + '/css/'));
 
  });*/
-/*
 
- gulp.task('copy:minify-css', function () {
- var banner = '/!*! HTML5 Boilerplate v' + pkg.version +
- ' | ' + pkg.license.type + ' License' +
- ' | ' + pkg.homepage + ' *!/\n\n';
- return gulp.src(dirs.src + '/css/' + mainStylesheet + '.css')
- .pipe(plugins.header(banner))
- .pipe(plugins.autoprefixer({
- browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
- cascade: false
- }))
- .pipe(cssmin())
- .pipe(rename({ suffix: '.min' }))
- .pipe(gulp.dest('dist' + '/css/'));
- });
- */
 gulp.task('copy:minify-css', function () {
     var banner = '/*!*! Taras Bilous: ' + 'tbilous@gmail.com' +
         ' | ' + pkg.homepage + ' *!*/\n\n';
@@ -152,8 +136,8 @@ gulp.task('copy:minify-css', function () {
 
 gulp.task('copy:uglify', function () {
     return gulp.src([
-            dirs.src + '/assets/js/*.*',
-            '!' + dirs.src + '/assets/js/main.js'
+            dirs.src + '/.assets/js/*.*',
+            '!' + dirs.src + '/.assets/js/main.js'
         ])
 
         .pipe(uglify('main.js', {
@@ -177,11 +161,12 @@ gulp.task('copy:misc', function () {
 
         // Copy all files
         dirs.src + '/**/*',
+        dirs.src + '/img/prod/sweet-2.jpg',
         // Exclude the following files
         // (other tasks will handle the copying of these files)
         '!' + dirs.src + '/css/' + mainStylesheet + '.css',
         // '!' + dirs.src + '/css/**/*',
-        '!' + dirs.src + '/assets/**/*',
+        '!' + dirs.src + '/.assets/**/*',
         '!' + dirs.src + '/img/**/*',
         '!' + dirs.src + '/js/' + mainJs + '.js',
         '!' + dirs.src + '/index.html'
@@ -193,13 +178,6 @@ gulp.task('copy:misc', function () {
 
     }).pipe(gulp.dest(dirs.dist));
 });
-
-/*
- gulp.task('copy:normalize', function () {
- return gulp.src('node_modules/normalize.css/normalize.css')
- .pipe(gulp.dest(dirs.dist + '/css'));
- });
- */
 
 gulp.task('lint:js', function () {
     return gulp.src([
